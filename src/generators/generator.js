@@ -1,55 +1,55 @@
 const generateRandomNum = (min, max) =>
   Math.round(Math.random() * (max - min)) + min;
 
-const sleepGenerator = async (date, userId) => {
-  const sleepTime =
-    new Date(date).getTime() -
-    28800000 +
-    generateRandomNum(21, 23) * 60 * 60 * 1000 +
-    generateRandomNum(0, 59) * 60 * 1000 +
-    generateRandomNum(0, 59) * 1000;
+// const sleepGenerator = async (date, userId) => {
+//   const sleepTime =
+//     new Date(date).getTime() -
+//     28800000 +
+//     generateRandomNum(21, 23) * 60 * 60 * 1000 +
+//     generateRandomNum(0, 59) * 60 * 1000 +
+//     generateRandomNum(0, 59) * 1000;
 
-  const wakeUpTime =
-    sleepTime +
-    generateRandomNum(6, 11) * 60 * 60 * 1000 +
-    generateRandomNum(0, 59) * 60 * 1000 +
-    generateRandomNum(0, 59) * 1000;
+//   const wakeUpTime =
+//     sleepTime +
+//     generateRandomNum(6, 11) * 60 * 60 * 1000 +
+//     generateRandomNum(0, 59) * 60 * 1000 +
+//     generateRandomNum(0, 59) * 1000;
 
-  const timeDifference = (wakeUpTime - sleepTime) / 1000 / 60 / 60;
+//   const timeDifference = (wakeUpTime - sleepTime) / 1000 / 60 / 60;
 
-  const hours = Math.trunc(timeDifference);
-  const minutesDecimal = (timeDifference - hours) * 60;
-  const minutes = Math.round(minutesDecimal);
+//   const hours = Math.trunc(timeDifference);
+//   const minutesDecimal = (timeDifference - hours) * 60;
+//   const minutes = Math.round(minutesDecimal);
 
-  const sleepDuration = {
-    hours: hours.toString().padStart(2, '0'),
-    minutes: minutes.toString().padStart(2, '0'),
-  };
+//   const sleepDuration = {
+//     hours: hours.toString().padStart(2, '0'),
+//     minutes: minutes.toString().padStart(2, '0'),
+//   };
 
-  console.log(`Sleep: ${new Date(sleepTime).toString()}`);
-  console.log(`Wake: ${new Date(wakeUpTime).toString()}`);
-  console.log(`Time difference: ${timeDifference}`);
-  console.log(
-    `Sleep duration: ${sleepDuration.hours}:${sleepDuration.minutes}`
-  );
-  console.log(
-    `Approximate calories burned: ${caloriesBurnedCalculator(
-      73,
-      174,
-      'm',
-      24,
-      timeDifference
-    ).toFixed()} cal`
-  );
+//   console.log(`Sleep: ${new Date(sleepTime).toString()}`);
+//   console.log(`Wake: ${new Date(wakeUpTime).toString()}`);
+//   console.log(`Time difference: ${timeDifference}`);
+//   console.log(
+//     `Sleep duration: ${sleepDuration.hours}:${sleepDuration.minutes}`
+//   );
+//   console.log(
+//     `Approximate calories burned: ${caloriesBurnedCalculator(
+//       73,
+//       174,
+//       'm',
+//       24,
+//       timeDifference
+//     ).toFixed()} cal`
+//   );
 
-  const toSend = {
-    userId: userId,
-    sleepDate: new Date(sleepTime),
-    wakeUpDate: new Date(wakeUpTime),
-  };
+//   const toSend = {
+//     userId: userId,
+//     sleepDate: new Date(sleepTime),
+//     wakeUpDate: new Date(wakeUpTime),
+//   };
 
-  return toSend;
-};
+//   return toSend;
+// };
 
 const caloriesBurnedCalculator = (weight, height, sex, age, hoursSlept) => {
   // Basal Metabolic Rate (BMR)
@@ -151,7 +151,7 @@ const weightRecordUpdate = (weight) => {
 
 module.exports = {
   generateRandomNum,
-  sleepGenerator,
+  // sleepGenerator,
   heartRateRecordGenerator,
   stepsGenerator,
   stepsRecordUpdate,

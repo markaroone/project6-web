@@ -4,7 +4,7 @@ import moment from 'moment';
 import { GeneralPageTemplate } from '../components/ui/index';
 import styles from './Generator.module.css';
 import {
-  sleepGenerator,
+  // sleepGenerator,
   heartRateRecordGenerator,
   stepsGenerator,
   stepsRecordUpdate,
@@ -15,16 +15,16 @@ import {
 } from '../generators/generator';
 
 const Generator = () => {
-  const postNewSleepRecord = async (date, value) => {
-    const data = await sleepGenerator(date, '62ac627a6ca528974b72554d');
+  // const postNewSleepRecord = async (date, value) => {
+  //   const data = await sleepGenerator(date, '62ac627a6ca528974b72554d');
 
-    const result = await axios.post(
-      'https://uplift-health-server.herokuapp.com/api/v1/sleep-records',
-      data
-    );
+  //   const result = await axios.post(
+  //     'https://uplift-health-server.herokuapp.com/api/v1/sleep-records',
+  //     data
+  //   );
 
-    console.log(result);
-  };
+  //   console.log(result);
+  // };
 
   const postNewHeartRateRecord = async (date, value) => {
     const data = await heartRateRecordGenerator(
