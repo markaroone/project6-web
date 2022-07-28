@@ -1,0 +1,81 @@
+.container {
+  margin: 6.4rem auto;
+
+  max-width: 120rem;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 2.8rem;
+}
+
+.container form {
+  display: flex;
+  gap: 5.6rem;
+}
+
+.btns {
+  max-width: 120rem;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 2.8rem;
+}
+
+.btns button {
+  padding: 1.8rem;
+  border: none;
+
+  font-family: inherit;
+  font-size: 1.8rem;
+  font-weight: 600;
+
+  color: #f1f3f5;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.hr {
+  background-color: #f06595;
+}
+
+.sleep {
+  background-color: #845ef7;
+}
+
+.fluids {
+  background-color: #339af0;
+}
+
+.steps {
+  background-color: #ff922b;
+}
+
+.hr:hover {
+  background-color: #e64980;
+}
+
+.sleep:hover {
+  background-color: #7048e8;
+}
+
+.fluids:hover {
+  background-color: #1c7ed6;
+}
+
+.steps:hover {
+  background-color: #f76707;
+}
+
+.dateInput,
+.numberInput {
+  padding: 0.4rem 1rem;
+
+  font-family: inherit;
+  font-size: 2rem;
+
+  border: 2px solid #ced4da;
+}
