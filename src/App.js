@@ -13,7 +13,8 @@ function App() {
         <Route path={'activities/:type'} element={<ActivitiesList />} />
         <Route path={'activities/:type/:id'} element={<Activity />} />
         <Route path='daily-summary' element={<ActivitiesList />} />
-        <Route path='goals' element={<Generator />} />;
+        {/* <Route path='goals' element={<Generator />} />; */}
+        <Route path='goals' element={<Dashboard />} />;
       </Routes>
     </SidebarProvider>
   );
